@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Home Dashboard</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="dashboard">
+    <h1>🏠 Welcome Home</h1>
+
+    <section class="section temperature">
+        <h2>🌡️ Temperature</h2>
+      
+        <div class="temp-control">
+          <label for="temp-slider">Set Temperature: <span id="temp-value">22°C</span></label>
+          <input type="range" id="temp-slider" min="16" max="30" value="22" />
+        </div>
+      
+        <h2>❄️ AC Controls</h2>
+        <div class="btn-group">
+          <button onclick="toggleAC(this)">
+            <span class="room-name">Living Room</span>
+            <span class="action-text">Turn On</span>
+          </button>
+          <button onclick="toggleAC(this)">
+            <span class="room-name">Bedroom</span>
+            <span class="action-text">Turn On</span>
+          </button>
+          <button onclick="toggleAC(this)">
+            <span class="room-name">Garage</span>
+            <span class="action-text">Turn On</span>
+          </button>
+        </div>
+      </section>
+      
+
+    <section class="section controls">
+      <h2>💡 Light Controls</h2>
+      <div class="btn-group">
+        <button onclick="toggleLight(this)">
+          <span class="room-name">Living Room</span>
+          <span class="action-text">Turn On</span>
+        </button>
+        <button onclick="toggleLight(this)">
+          <span class="room-name">Bedroom</span>
+          <span class="action-text">Turn On</span>
+        </button>
+        <button onclick="toggleLight(this)">
+          <span class="room-name">Garage</span>
+          <span class="action-text">Turn On</span>
+        </button>
+      </div>      
+    </section>
+
+    <section class="section rooms">
+      <h2>📍 Rooms Status</h2>
+      <div class="room-cards">
+        <div class="card">Living Room<br><span class="status online">Online</span></div>
+        <div class="card">Bedroom<br><span class="status online">Online</span></div>
+        <div class="card">Kitchen<br><span class="status offline">Offline</span></div>
+        <div class="card">Garage<br><span class="status online">Online</span></div>
+      </div>
+    </section>
+
+    <section class="section security">
+      <h2>🔐 Security</h2>
+      <div class="card wide">
+        Main Door: <span class="status">Locked</span><br>
+        Garage Door: <span class="status">Unlocked</span><br>
+        Motion Detected: <span class="status">None</span>
+      </div>
+    </section>
+
+    <section class="section weather">
+      <h2>⛅ Weather</h2>
+      <div class="weather-widget">
+        <div>City: Ludhiana</div>
+        <div>Condition: Sunny</div>
+      </div>
+    </section>
+    <section class="section notifications">
+      <h2>🔔 Notifications</h2>
+      <div class="notification-list">
+        <div class="notification">New firmware update available!</div>
+        <div class="notification">Motion detected in the garage.</div>
+        <div class="notification">Living room light turned on.</div>
+      </div>
+    </section>
+  <script src="script.js"></script>
+</body>
+</html>
